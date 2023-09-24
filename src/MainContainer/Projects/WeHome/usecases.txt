@@ -1,0 +1,12 @@
+As a user
+I want to open WeHome
+And see the tasks of the day
+
+As a user
+I want to open WeHome
+And add a task to a day
+
+
+As a user
+I want to open WeHome 
+And see the tasks of all my friends for the day
