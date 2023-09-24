@@ -1,0 +1,28 @@
+name: Publish to GH Pages
+on:
+  push:
+    branches:
+      - main
+      - init
+    paths-ignore:
+      - '**/README.*md'
+      - '**/.gitignore'
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '18.x'
+    - run: npm install
+    - run: npm run build
+    - name: Run deploy script
+      run: |
+        git config user.name "edsonaf" && git config user.email "edsonaf@users.noreply.github.com"
+        git checkout --orphan gh-pages
+        git --work-tree build add --all
+        git --work-tree build commit -m 'Deploy'
+        git push origin HEAD:gh-pages --force
