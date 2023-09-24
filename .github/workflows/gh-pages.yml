@@ -19,10 +19,20 @@ jobs:
         node-version: '18.x'
     - run: npm install
     - run: npm run build
-    - name: Run deploy script
-      run: |
-        git config user.name "edsonaf" && git config user.email "edsonaf@users.noreply.github.com"
-        git checkout --orphan gh-pages
-        git --work-tree build add --all
-        git --work-tree build commit -m 'Deploy'
-        git push origin HEAD:gh-pages --force
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
