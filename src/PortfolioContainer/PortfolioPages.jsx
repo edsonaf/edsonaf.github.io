@@ -16,13 +16,5 @@ export const PORTFOLIO_SCREENS = [
   {
     screen_name: "Resume",
     component: Resume,
-  },
-  {
-    screen_name: "Projects",
-    component: Projects,
-  },
-  {
-    screen_name: "Contact me",
-    component: ContactMe,
-  },
+  }
 ];
