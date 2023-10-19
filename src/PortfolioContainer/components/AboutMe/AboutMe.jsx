@@ -12,10 +12,11 @@ export default function AboutMe(props) {
   };
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  const years = new Date().getFullYear() - 2015;
 
   const SCREEN_CONSTANTS = {
     description:
-      "6+ years experienced .NET Developer; from Windows Forms to Windows Presentation Foundation; \n" +
+      years + "+ years experienced .NET Developer; from Windows Forms to Windows Presentation Foundation; \n" +
       "ASP.Net backend + Angular frontend in the day; currently gaining experience with Xamarin and React at night.",
 
     highlights: {
