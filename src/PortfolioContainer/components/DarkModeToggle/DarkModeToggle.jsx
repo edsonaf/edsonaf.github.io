@@ -24,18 +24,11 @@ export default function DarkModeToggle() {
 
   return (
     // TODO: use SVG's instead of png
-    // <Checkbox className="dark-mode-container"
-    //   icon={<SaintIcon />}
-    //   checkedIcon={<DevilIcon />}
-    //   checked={isDark}
-    //   onChange={({ target }) => setIsDark(target.checked)}
-    // />
-
     <IconButton
-      onClick={() => setIsDark(!isDark)}
+      onClick={() => console.log("Dark mode is turned off...")}
       size="large"
       className="dark-mode-container">
-      <img src={isDark ? lightThemeImage : darkThemeImage} alt="logo missing" />
+      <img src={darkThemeImage} alt="logo missing" />
     </IconButton>
   );
 }

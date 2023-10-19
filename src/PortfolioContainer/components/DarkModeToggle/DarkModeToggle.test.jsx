@@ -23,6 +23,6 @@ describe('DarkModeToggle', () => {
     afterEach(cleanup);
 
     it('renders without crashing', () => {
-        const { getByText } = render(<DarkModeToggle />);
+        const { _ } = render(<DarkModeToggle />);
     });
 });
