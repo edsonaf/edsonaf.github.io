@@ -1,7 +1,5 @@
 import AboutMe from "./components/AboutMe/AboutMe";
-import ContactMe from "./components/ContactMe/ContactMe";
 import Home from "./components/Home/Home";
-import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/Resume";
 
 export const PORTFOLIO_SCREENS = [

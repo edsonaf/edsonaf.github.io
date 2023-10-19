@@ -11,7 +11,7 @@ export default function DarkModeToggle() {
   );
 
   const [isDark, setIsDark] = useState(systemPrefersDark);
-  const lightThemeImage = process.env.PUBLIC_URL + "/wings_64.png";
+  // const lightThemeImage = process.env.PUBLIC_URL + "/wings_64.png";
   const darkThemeImage = process.env.PUBLIC_URL + "/favicon.svg";
 
   useEffect(() => {
