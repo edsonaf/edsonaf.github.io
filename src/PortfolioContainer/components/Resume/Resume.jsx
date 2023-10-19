@@ -49,8 +49,8 @@ const Resume = (props) => {
 
   /* STATIC RESUME DATA FOR THE LABELS*/
   const resumeBullets = [
-    { label: "Education", logoSrc: educationIcon },
     { label: "Work History", logoSrc: workHistoryIcon },
+    { label: "Education", logoSrc: educationIcon },
     { label: "Programming Skills", logoSrc: programmingSkillsIcon },
     { label: "Interests", logoSrc: interestsIcon },
   ];
@@ -66,7 +66,57 @@ const Resume = (props) => {
     { skill: "React JS", ratingPercentage: 45 },
   ];
 
-  const resumeDetails = [
+  const resumeDetails = 
+  [
+     /* WORK EXPERIENCE */
+     <div className="resume-screen-container" key="work-experience">
+     <div className="experience-container">
+       <ResumeHeading
+         heading={"YANGA Sportswater, Breda"}
+         subHeading={"External Software Developer"}
+         fromDate={"2023"}
+         toDate={"present"}
+       />
+       <div className="experience-description">
+         <span className="resume-description-text">
+           Keywords: C#; ASP.NET; UWP; SQL; Agile; Azure Devops; Git; JSON; XML;
+         </span>
+         <br />
+       </div>
+     </div>
+     
+     <div className="experience-container">
+       <ResumeHeading
+         heading={"Canon Production Printing, Venlo"}
+         subHeading={"External Software Developer"}
+         fromDate={"2019"}
+         toDate={"2023"}
+       />
+       <div className="experience-description">
+         <span className="resume-description-text">
+           Keywords: C#; ASP.NET; Regex; Typescript; Angular; T4 scripts;
+           Agile; Azure Devops; Git; TDD; BDD; Gherkin; Specflow; JSON; XML;
+         </span>
+         <br />
+       </div>
+     </div>
+     <div className="experience-container">
+       <ResumeHeading
+         heading={"Ellips, Eindhoven"}
+         subHeading={"Full Stack .NET Developer"}
+         fromDate={"2015"}
+         toDate={"2019"}
+       />
+       <div className="experience-description">
+         <span className="resume-description-text">
+           Keywords: C#; ASP.NET; T4 scripts; WPF; MVVM; Agile; Svn; Git; TDD;
+           BDD; Gherkin; Specflow; JSON;
+         </span>
+         <br />
+       </div>
+     </div>
+   </div>,
+
     <div className="resume-screen-container" key="education">
       <ResumeHeading
         heading={"Fontys University of Applied Sciences, Eindhoven"}
@@ -82,41 +132,7 @@ const Resume = (props) => {
         toDate={"2010"}
       />
     </div>,
-
-    /* WORK EXPERIENCE */
-    <div className="resume-screen-container" key="work-experience">
-      <div className="experience-container">
-        <ResumeHeading
-          heading={"Canon Production Printing, Venlo"}
-          subHeading={"External Software Developer"}
-          fromDate={"2019"}
-          toDate={"Present"}
-        />
-        <div className="experience-description">
-          <span className="resume-description-text">
-            Keywords: C#; ASP.NET; Regex; Typescript; Angular; T4 scripts;
-            Agile; Azure Devops; Git; TDD; BDD; Gherkin; Specflow; JSON; XML;
-          </span>
-          <br />
-        </div>
-      </div>
-      <div className="experience-container">
-        <ResumeHeading
-          heading={"Ellips, Eindhoven"}
-          subHeading={"Full Stack .NET Developer"}
-          fromDate={"2015"}
-          toDate={"2019"}
-        />
-        <div className="experience-description">
-          <span className="resume-description-text">
-            Keywords: C#; ASP.NET; T4 scripts; WPF; MVVM; Agile; Svn; Git; TDD;
-            BDD; Gherkin; Specflow; JSON;
-          </span>
-          <br />
-        </div>
-      </div>
-    </div>,
-
+   
     /* PROGRAMMING SKILLS */
     <div
       className="resume-screen-container programming-skills-container"
