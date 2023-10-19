@@ -24,7 +24,7 @@ export default function Footer() {
     <div className="footer-container">
       <div className="footer-parent">
         {/* TODO REMOVE IMAGE, PLACE SVG? */}
-        <img src={isDarkTheme ? footerShapeDark : footerShape} alt="no" />
+        <img src={footerShape} alt="no" />
       </div>
     </div>
   );

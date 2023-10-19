@@ -34,24 +34,24 @@ body {
   --color-foreground: #1f2023;
   --header-foreground: var(--primary-color);
 
-  &.dark {
-    --color-background: #1f2023;
-    --color-foreground: #efefef;
+  // &.dark {
+  //   --color-background: #1f2023;
+  //   --color-foreground: #efefef;
 
-    --primary-color: #333333;
-    // --primary-light-color: #8e8e8e;
-    --primary-dark-color: #373737;
+  //   --primary-color: #333333;
+  //   // --primary-light-color: #8e8e8e;
+  //   --primary-dark-color: #373737;
 
-    --primary-light-color: #b71c1c;
-    --accent-color: #b71c1c;
-    --accent-light-color: #f05545;
-    --accent-dark-color: #7f0000;
+  //   --primary-light-color: #b71c1c;
+  //   --accent-color: #b71c1c;
+  //   --accent-light-color: #f05545;
+  //   --accent-dark-color: #7f0000;
 
-    --whiteOrBlack: #121212;
-    --blackOrWhite: #fafafa;
+  //   --whiteOrBlack: #121212;
+  //   --blackOrWhite: #fafafa;
 
-    --header-foreground: var(--accent-color);
-  }
+  //   --header-foreground: var(--accent-color);
+  // }
 
   background-color: var(--color-background);
   color: var(--color-foreground);
