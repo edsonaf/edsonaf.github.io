@@ -17,7 +17,7 @@ export default function AboutMe(props) {
   const SCREEN_CONSTANTS = {
     description:
       years + "+ years experienced .NET Developer; from Windows Forms to Windows Presentation Foundation; \n" +
-      "ASP.Net backend + Angular frontend in the day; currently gaining experience with Xamarin and React at night.",
+      "ASP.Net backend + Angular frontend in the day; Currently excited about Artificial Intelligence. Constantly working on improving the basics",
 
     highlights: {
       heading: "A Few Highlights:",
@@ -25,7 +25,7 @@ export default function AboutMe(props) {
         "Full stack windows, web and mobile development",
         "Interactive and rich user interfaces as per design",
         "Building REST API",
-        // "Pirate of the Caribbean",
+        "Pirate of the Caribbean ☠️",
       ],
     },
   };
@@ -68,16 +68,13 @@ export default function AboutMe(props) {
               <Tooltip title="Currently not available" className="btn">
                 <button
                   onClick={() => {
-                    ScrollService.scrollHandler.scrollToHireMe();
+                    console.log("I am currently unavailable unless we are talking about a minimum of $10000 per day/month (it depends)");
                   }}
                   className="primary-btn"
                 >
                   Hire me
                 </button>
               </Tooltip>
-              {/* <a href="" download=""> */}
-                {/* <button className="btn highlighted-btn">Get Resume</button> */}
-              {/* </a> */}
             </div>
           </div>
         </div>
