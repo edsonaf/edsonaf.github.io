@@ -17,9 +17,9 @@ export default function Profile() {
       backDelay: 1500,
       backSpeed: 60,
       strings: [
-        "Copy-paste expert",
-        "Enthusiastic Dev",
         "Full Stack .NET Developer",
+        "Enthusiastic Dev",
+        "Copy-paste expert",
       ],
     });
   }, []);
