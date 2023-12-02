@@ -14,14 +14,6 @@ const Resume = (props) => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
 
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
-
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
   /* REUSABLE MINOR COMPONENTS */
   const ResumeHeading = (props) => {
     return (
@@ -57,13 +49,11 @@ const Resume = (props) => {
 
   //here we have
   const programmingSkillsDetails = [
-    { skill: "C#", ratingPercentage: 85 },
-    { skill: "ASP .NET", ratingPercentage: 85 },
-    { skill: "Angular JS", ratingPercentage: 80 },
+    { skill: "C#", ratingPercentage: 95 },
+    { skill: "React / Angular / Typescript", ratingPercentage: 75 },
     { skill: "CSS", ratingPercentage: 80 },
     { skill: "HTML", ratingPercentage: 80 },
-    { skill: "Python", ratingPercentage: 55 },
-    { skill: "React JS", ratingPercentage: 45 },
+    { skill: "Python", ratingPercentage: 60 },
   ];
 
   const resumeDetails = 
@@ -79,7 +69,7 @@ const Resume = (props) => {
        />
        <div className="experience-description">
          <span className="resume-description-text">
-           Keywords: C#; ASP.NET; UWP; SQL; Agile; Azure Devops; Git; JSON; XML;
+           .NET - ASP.NET - WinUI - C#; Angular - Typescript; SQL; Scrum - Agile; Azure DevOps; Git; JSON;
          </span>
          <br />
        </div>
@@ -94,8 +84,8 @@ const Resume = (props) => {
        />
        <div className="experience-description">
          <span className="resume-description-text">
-           Keywords: C#; ASP.NET; Regex; Typescript; Angular; T4 scripts;
-           Agile; Azure Devops; Git; TDD; BDD; Gherkin; Specflow; JSON; XML;
+           .NET - ASP.NET - C#; Regex; Angular - Typescript; T4 scripts;
+           Agile; Azure DevOps; Git; TDD; BDD; Gherkin; Specflow; JSON; XML;
          </span>
          <br />
        </div>
@@ -109,7 +99,7 @@ const Resume = (props) => {
        />
        <div className="experience-description">
          <span className="resume-description-text">
-           Keywords: C#; ASP.NET; T4 scripts; WPF; MVVM; Agile; Svn; Git; TDD;
+           .NET - ASP.NET - WPF - MVVM - C#; T4 scripts; Scrum - Agile; SVN - TBD - Git; TDD;
            BDD; Gherkin; Specflow; JSON;
          </span>
          <br />
@@ -141,7 +131,7 @@ const Resume = (props) => {
       {programmingSkillsDetails.map((skill, index) => (
         <div className="skill-parent" key={index}>
           <div className="heading-bullet"></div>
-          <span>{skill.skill}</span>
+          <span className="skill">{skill.skill}</span>
           <div className="skill-percentage">
             <div
               style={{ width: skill.ratingPercentage + "%" }}
@@ -204,16 +194,9 @@ const Resume = (props) => {
     );
   };
 
-  useEffect(() => {
-    return () => {
-      /* UNSUBSCRIBE THE SUBSCRIPTIONS */
-      fadeInSubscription.unsubscribe();
-    };
-  }, [fadeInSubscription]);
-
   return (
     <div
-      className="resume-container screen-container fade-in"
+      className="resume-container screen-container"
       id={props.id || ""}
     >
       <div className="resume-content">

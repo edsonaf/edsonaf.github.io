@@ -36,6 +36,23 @@
   font-size: 12px;
 }
 
+
+.resume-description-text:active {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: (0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .resume-details-carousal {
   transition: transform 1s ease-out;
 }
@@ -70,7 +87,7 @@
 .bullet-label {
   font-size: 14px;
   white-space: nowrap;
-  font-family: "Poppins SemiBold";
+  // font-family: "Poppins SemiBold";
 }
 
 .bullet-logo {
@@ -113,7 +130,7 @@
 .resume-main-heading span {
   color: var(--primary-dark-dolor);
   font-size: 16px;
-  font-family: "Poppins SemiBold";
+  // font-family: "Poppins SemiBold";
 }
 
 .experience-description {
@@ -131,8 +148,8 @@
 }
 
 .resume-sub-heading {
-  font-size: 14px;
-  font-family: "Poppins SemiBold";
+  font-size: 12px;
+  // font-family: "Poppins SemiBold";
   color: var(--blackOrWhite);
   margin: 10px 0 0 0;
 }
@@ -170,6 +187,13 @@
   height: 15px;
   width: 70%;
   background-color: var(--primary-light-color);
+  box-shadow: 0 0 10px 5px var(--primary-light-color);
+}
+
+.skill {
+  // font-size: 20px;
+  margin-bottom: 4px;
+  color: var(--primary-light-color);
 }
 
 .skill-percentage .active-percentage-bar {
@@ -179,11 +203,11 @@
   background-color: var(--primary-color);
 }
 
-.skill-parent span {
-  font-family: "Poppins Bold";
-  font-size: 16px;
-  color: var(--primary-light-color);
-}
+// .skill-parent span {
+//   font-family: "Poppins Bold";
+//   font-size: 16px;
+//   color: var(--primary-light-color);
+// }
 
 /* IPAD PRO RESPONSIVENESS */
 @media only screen and (max-width: 1110px) {
@@ -231,4 +255,9 @@
   .selected-bullet {
     width: 100%;
   }
+}
+
+@font-face {
+  font-family: frenchie;
+  src: url('./assets/Gotham-Bold.otf');
 }
