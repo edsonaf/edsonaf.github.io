@@ -24,7 +24,9 @@ const Resume = (props) => {
               {props.fromDate + "-" + props.toDate}
             </div>
           ) : (
-            <div></div>
+            <div className="heading-date">
+              {props.toDate}
+            </div>
           )}
         </div>
         <div className="resume-sub-heading">
@@ -54,106 +56,117 @@ const Resume = (props) => {
     { skill: "Python", ratingPercentage: 60 },
   ];
 
-  const resumeDetails = 
-  [
-     /* WORK EXPERIENCE */
-     <div className="resume-screen-container" key="work-experience">
-     <div className="experience-container">
-       <ResumeHeading
-         heading={"YANGA Sportswater, Breda"}
-         subHeading={"External Software Developer"}
-         fromDate={"2023"}
-         toDate={"present"}
-       />
-       <div className="experience-description">
-         <span className="resume-description-text">
-           .NET - ASP.NET - WinUI - C#; Angular - Typescript; SQL; Scrum - Agile; Azure DevOps; Git; JSON;
-         </span>
-         <br />
-       </div>
-     </div>
-     
-     <div className="experience-container">
-       <ResumeHeading
-         heading={"Canon Production Printing, Venlo"}
-         subHeading={"External Software Developer"}
-         fromDate={"2019"}
-         toDate={"2023"}
-       />
-       <div className="experience-description">
-         <span className="resume-description-text">
-           .NET - ASP.NET - C#; Regex; Angular - Typescript; T4 scripts;
-           Agile; Azure DevOps; Git; TDD; BDD; Gherkin; Specflow; JSON; XML;
-         </span>
-         <br />
-       </div>
-     </div>
-     <div className="experience-container">
-       <ResumeHeading
-         heading={"Ellips, Eindhoven"}
-         subHeading={"Full Stack .NET Developer"}
-         fromDate={"2015"}
-         toDate={"2019"}
-       />
-       <div className="experience-description">
-         <span className="resume-description-text">
-           .NET - ASP.NET - WPF - MVVM - C#; T4 scripts; Scrum - Agile; SVN - TBD - Git; TDD;
-           BDD; Gherkin; Specflow; JSON;
-         </span>
-         <br />
-       </div>
-     </div>
-   </div>,
-
-    <div className="resume-screen-container" key="education">
-      <ResumeHeading
-        heading={"Fontys University of Applied Sciences, Eindhoven"}
-        subHeading={"Bachelor of Science Information Technology"}
-        fromDate={"2011"}
-        toDate={"2015"}
-      />
-
-      <ResumeHeading
-        heading={"Maria Immaculate Lyceum, Willemstad"}
-        subHeading={"High School"}
-        fromDate={"2004"}
-        toDate={"2010"}
-      />
-    </div>,
-   
-    /* PROGRAMMING SKILLS */
-    <div
-      className="resume-screen-container programming-skills-container"
-      key="programming-skills"
-    >
-      {programmingSkillsDetails.map((skill, index) => (
-        <div className="skill-parent" key={index}>
-          <div className="heading-bullet"></div>
-          <span className="skill">{skill.skill}</span>
-          <div className="skill-percentage">
-            <div
-              style={{ width: skill.ratingPercentage + "%" }}
-              className="active-percentage-bar"
-            ></div>
+  const resumeDetails =
+    [
+      /* WORK EXPERIENCE */
+      <div className="resume-screen-container" key="work-experience">
+        <div className="experience-container">
+          <ResumeHeading
+            subHeading={"YANGA Sportswater, Breda"}
+            heading={"External Software Developer"}
+            fromDate={"2023"}
+            toDate={"present"}
+          />
+          <div className="experience-description">
+            <span className="resume-description-text">
+              .NET - ASP.NET - WinUI - C#; Angular - Typescript; SQL; Scrum - Agile; Azure DevOps; Git; JSON;
+            </span>
+            <br />
           </div>
         </div>
-      ))}
-    </div>,
 
-    /* Interests */
-    <div className="resume-screen-container" key="interests">
-      <ResumeHeading
-        heading="Reading"
-        description="Crime; Mystery; Philosophy; Science Fiction"
-      />
-      <ResumeHeading
-        heading="Gaming"
-        description="Action; Adventure; MOBA; RPG;"
-      />
-      <ResumeHeading heading="Music" description="" />
-      <ResumeHeading heading="Programming" description="" />
-    </div>,
-  ];
+        <div className="experience-container">
+          <ResumeHeading
+            subHeading={"Canon Production Printing, Venlo"}
+            heading={"External Software Developer"}
+            fromDate={"2019"}
+            toDate={"2023"}
+          />
+          <div className="experience-description">
+            <span className="resume-description-text">
+              .NET - ASP.NET - C#; Regex; Angular - Typescript; T4 scripts;
+              Agile; Azure DevOps; Git; TDD; BDD; Gherkin; Specflow; JSON; XML;
+            </span>
+            <br />
+          </div>
+        </div>
+        <div className="experience-container">
+          <ResumeHeading
+            subHeading={"Ellips, Eindhoven"}
+            heading={"Full Stack .NET Developer"}
+            fromDate={"2015"}
+            toDate={"2019"}
+          />
+          <div className="experience-description">
+            <span className="resume-description-text">
+              .NET - ASP.NET - WPF - MVVM - C#; T4 scripts; Scrum - Agile; SVN - TBD - Git; TDD;
+              BDD; Gherkin; Specflow; JSON;
+            </span>
+            <br />
+          </div>
+        </div>
+      </div>,
+
+      /* EDUCATION */
+      <div className="resume-screen-container" key="education">
+        <ResumeHeading
+          heading={"Introduction to Artificial Inteligence"}
+          subHeading={"LinkedIn"}
+          toDate={"November 2023"} />
+
+        <ResumeHeading
+          heading={"Sales Training"}
+          subHeading={"Exellior B.V."}
+          toDate={"February 2021"} />
+
+        <ResumeHeading
+          heading={"Bachelor of Science Information Technology"}
+          subHeading={"Fontys University of Applied Sciences, Eindhoven"}
+          fromDate={"2011"}
+          toDate={"2015"}
+        />
+
+        <ResumeHeading
+          heading={"High School"}
+          subHeading={"Maria Immaculate Lyceum, Willemstad"}
+          fromDate={"2004"}
+          toDate={"2010"}
+        />
+      </div>,
+
+      /* PROGRAMMING SKILLS */
+      <div
+        className="resume-screen-container programming-skills-container"
+        key="programming-skills"
+      >
+        {programmingSkillsDetails.map((skill, index) => (
+          <div className="skill-parent" key={index}>
+            <div className="heading-bullet"></div>
+            <span className="skill">{skill.skill}</span>
+            <div className="skill-percentage">
+              <div
+                style={{ width: skill.ratingPercentage + "%" }}
+                className="active-percentage-bar"
+              ></div>
+            </div>
+          </div>
+        ))}
+      </div>,
+
+      /* Interests */
+      <div className="resume-screen-container" key="interests">
+        <ResumeHeading
+          heading="Reading"
+          description="Crime; Mystery; Philosophy; Science Fiction"
+        />
+        <ResumeHeading
+          heading="Gaming"
+          description="Action; Adventure; MOBA; RPG;"
+        />
+        <ResumeHeading heading="Music" description="" />
+        <ResumeHeading heading="Programming" description="" />
+      </div>,
+    ];
 
   const handleCarousal = (index) => {
     let offsetHeight = 360;
