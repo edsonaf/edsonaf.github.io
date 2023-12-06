@@ -16,7 +16,7 @@ export default function ContactMe(props) {
 
   const submitForm = async (e) => {
     e.preventDefault();
-    console.log("I am currently unavailable unless we are talking about a minimum of $10000.");
+    console.log("I am currently unavailable unless we are talking about a minimum of $10000 per day/month (it depends)");
     console.log("Help me pay off some debts? paypal.me/jjjalexander");
     window.location = "mailto:edsaintsoftware@gmail.com";
   };
