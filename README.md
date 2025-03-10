@@ -12,11 +12,11 @@ Goal of project is to create a portfolio website.
 
 In the project directory, you can run:
 
+### `npm run build`
+
 ### `npm run preview`
 
 ### `npm run dev`
-
-### `npm run build`
 
 ## References
 
