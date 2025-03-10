@@ -21,7 +21,7 @@ jobs:
       run: |
         npm run preview &
         sleep 5
-        npx cypress run --spec 'cypress/integration/**/*.spec.js'
+        npx cypress run
     - name: Deploy
       if: github.event_name == 'push'
       uses: JamesIves/github-pages-deploy-action@releases/v3
