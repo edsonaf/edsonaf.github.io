@@ -10,11 +10,11 @@ const Main = lazy(() => import("./MainContainer/Main"));
 function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/main" element={<Main />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/main" element={<Main />} />
+      </Routes>
+    </Suspense>
   );
 }
 
