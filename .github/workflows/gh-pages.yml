@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - init
 jobs:
   build:
     runs-on: macos-latest
@@ -12,9 +11,14 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
-        node-version: '18.x'
+        node-version: '22.x'
     - run: npm install
     - run: npm run build
+    - name: Confirm Build and Check for Errors
+      run: |
+        npm run preview &
+        sleep 5
+        npx cypress run --spec 'cypress/integration/**/*.spec.js'
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
