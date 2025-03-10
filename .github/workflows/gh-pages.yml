@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 jobs:
   build:
     runs-on: macos-latest
@@ -20,6 +23,7 @@ jobs:
         sleep 5
         npx cypress run --spec 'cypress/integration/**/*.spec.js'
     - name: Deploy
+      if: github.event_name == 'push'
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
