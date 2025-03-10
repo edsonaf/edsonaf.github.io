@@ -1,6 +1,7 @@
 import { IconButton } from "@mui/material";
 import React, { useState } from "react";
 import useMediaQuery from "../../utilities/UseMediaQuery";
+import saint from "../../../../favicon.svg"
 import "./DarkModeToggle.scss";
 
 export default function DarkModeToggle() {
@@ -12,7 +13,6 @@ export default function DarkModeToggle() {
 
   const [isDark, setIsDark] = useState(systemPrefersDark);
   // const lightThemeImage = "/wings_64.png";
-  const darkThemeImage = "/favicon.svg";
 
   // useEffect(() => {
   //   if (isDark) {
@@ -28,7 +28,7 @@ export default function DarkModeToggle() {
       onClick={() => console.log("Dark mode is turned off...")}
       size="large"
       className="dark-mode-container">
-      <img src={darkThemeImage} alt="logo missing" />
+      <img src={saint} alt="logo" />
     </IconButton>
   );
 }
