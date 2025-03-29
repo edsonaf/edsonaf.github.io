@@ -10,9 +10,6 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.16.14",
     "@mui/x-data-grid": "^5.17.6",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
     "axios": "^1.8.2",
     "date-fns": "^2.29.3",
     "font-awesome": "^4.7.0",
@@ -32,12 +29,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended"
     ]
   },
   "browserslist": {
@@ -53,6 +52,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
