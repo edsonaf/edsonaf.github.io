@@ -18,7 +18,7 @@ const SaveTheDate = () => {
   const [trackIndex, setTrackIndex] = useState(0);
 
   const audioRef = useRef(
-    new Audio(process.env.PUBLIC_URL + Playlist[trackIndex].link)
+    new Audio(Playlist[trackIndex].link)
   );
 
   const [trackProgress, setTrackProgress] = useState(0);
