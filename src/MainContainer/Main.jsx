@@ -1,9 +1,10 @@
+import Home from "./Home/Home";
 import "./Main.scss";
 
 function Main() {
   return (
     <div>
-      <Hello />
+      <Home />
     </div>
   );
 }

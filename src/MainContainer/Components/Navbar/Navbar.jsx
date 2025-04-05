@@ -46,7 +46,7 @@ const Navbar = ({ user }) => {
           </div> */}
           <div className="item">
             <img
-              src={user.profileImageUrl}
+              src=""
               alt=""
               className="avatar"
             />

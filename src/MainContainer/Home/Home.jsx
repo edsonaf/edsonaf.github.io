@@ -1,14 +1,11 @@
 import "./Home.scss";
 import { useCallback, useState } from "react";
-import { useSession } from "@clerk/clerk-react";
 import Navbar from "../Components/Navbar/Navbar";
 import Sidebar from "../Components/Sidebar/Sidebar";
 import { GET_PAGE_COMPONENT } from "../Utilities/CommonUtils";
 import { COMPANY_NAME } from "../GlobalConstants";
 
 const Home = () => {
-  const session = useSession();
-  const { user } = session;
   const [selectedComponent, setSelectedComponent] = useState("dashboard"); // default
 
   const callback = useCallback((component) => {
@@ -28,7 +25,7 @@ const Home = () => {
         parentCallback={callback}
       />
       <div className="homeContainer">
-        <Navbar user={user} />
+        <Navbar user={null} />
         <div id="container">{mapSelectedComponent()}</div>
       </div>
     </div>
