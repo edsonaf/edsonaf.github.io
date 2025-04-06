@@ -11,7 +11,7 @@ import PauseIcon from "@mui/icons-material/Pause";
 import Slider from "@mui/material/Slider";
 import { Playlist } from "./playlist";
 import "./SaveTheDate.scss";
-import { useState, useRef/*, useEffect*/ } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Stack } from "@mui/material";
 
 const SaveTheDate = () => {
@@ -26,7 +26,7 @@ const SaveTheDate = () => {
   const [volume, setVolume] = useState(audioRef.current.volume);
 
   const intervalRef = useRef();
-  // const isReady = useRef(false);
+  const isReady = useRef(false);
 
   const { duration } = audioRef.current;
 
@@ -82,42 +82,42 @@ const SaveTheDate = () => {
     startTimer();
   };
 
-  // useEffect(() => {
-  //   if (isPlaying) {
-  //     audioRef.current.play();
-  //     startTimer();
-  //   } else {
-  //     clearInterval(intervalRef.current);
-  //     audioRef.current.pause();
-  //   }
-  // }, [isPlaying]);
+  useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.play();
+      startTimer();
+    } else {
+      clearInterval(intervalRef.current);
+      audioRef.current.pause();
+    }
+  }, [isPlaying]);
 
-  // useEffect(() => {
-  //   // Pause and clean up on unmount
-  //   return () => {
-  //     audioRef.current.pause();
-  //     clearInterval(intervalRef.current);
-  //   };
-  // }, []);
+  useEffect(() => {
+    // Pause and clean up on unmount
+    return () => {
+      audioRef.current.pause();
+      clearInterval(intervalRef.current);
+    };
+  }, []);
 
   // Handle setup when changing tracks
-  // useEffect(() => {
-  //   audioRef.current.pause();
-  //   audioRef.current = new Audio(
-  //     process.env.PUBLIC_URL + Playlist[trackIndex].link
-  //   );
-  //   audioRef.current.volume = volume;
-  //   setTrackProgress(audioRef.current.currentTime);
+  useEffect(() => {
+    audioRef.current.pause();
+    audioRef.current = new Audio(
+      Playlist[trackIndex].link
+    );
+    audioRef.current.volume = volume;
+    setTrackProgress(audioRef.current.currentTime);
 
-  //   if (isReady.current) {
-  //     audioRef.current.play();
-  //     setIsPlaying(true);
-  //     startTimer();
-  //   } else {
-  //     // Set the isReady ref as true for the next pass
-  //     isReady.current = true;
-  //   }
-  // }, [trackIndex]);
+    if (isReady.current) {
+      audioRef.current.play();
+      setIsPlaying(true);
+      startTimer();
+    } else {
+      // Set the isReady ref as true for the next pass
+      isReady.current = true;
+    }
+  }, [trackIndex]);
 
   // TODO: Move this function to a common package and enable hours functionality
   function getTime(time) {
