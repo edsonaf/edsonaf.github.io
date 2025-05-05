@@ -9,7 +9,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",
-    "@mui/x-data-grid": "^7.29.2",
+    "@mui/x-data-grid": "^8.2.0",
     "axios": "^1.8.2",
     "date-fns": "^4.0.0",
     "font-awesome": "^4.7.0",
