@@ -70,6 +70,6 @@
     "prettier": "^3.0.0",
     "sass": "^1.86.3",
     "ts-jest": "^29.3.1",
-    "vite-plugin-static-copy": "^2.3.0"
+    "vite-plugin-static-copy": "^2.3.1"
   }
 }
