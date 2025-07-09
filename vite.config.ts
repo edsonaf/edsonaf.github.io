@@ -10,6 +10,10 @@ export default defineConfig({
                 {
                     src: 'src/assets/audio',
                     dest: ''
+                },
+                {
+                    src: 'src/MainContainer/Projects/Blogs/assets/*',
+                    dest: ''
                 }
             ]
         })
