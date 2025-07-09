@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./components/Footer/Footer";
 import { PORTFOLIO_SCREENS } from "./PortfolioPages";
 import "./Portfolio.scss";
 
@@ -23,5 +24,8 @@ export default function PortfolioContainer() {
 
   return <div className="portfolio-container">
     {mapAllScreens()}
-    </div>;
+    <Footer startYear="2021"
+      currentYear={new Date().getFullYear()}
+      name='Saint Software' />
+  </div>;
 }
